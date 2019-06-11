@@ -1,0 +1,265 @@
+{
+    "card": {
+        "style": "",
+        "script": "",
+        "title": "",
+        "titleStyle": [
+            {
+                "display": "none"
+            }
+        ],
+        "showCarousel": true,
+        "conditions": [],
+        "body": [
+            {
+                "type": "ColumnSet",
+                "columns": [
+                    {
+                        "type": "Column",
+                        "style": {
+                            "justify-content": "center"
+                        },
+                        "items": [
+                            {
+                                "type": "Image",
+                                "class": "conditional_image",
+                                "size": "large",
+                                "horizontalAlignment": "left",
+                                "url": "{panel:WhiteImageUrl}"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Column",
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "size": "large",
+                                "wrap": true,
+                                "horizontalAlignment": "left",
+                                "text": "This Week",
+                                "color": "white",
+                                "weight": "light"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Column",
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "size": "large",
+                                "wrap": true,
+                                "horizontalAlignment": "center",
+                                "text": "{panel:Shipped}",
+                                "color": "white",
+                                "style": {
+                                    "backgroundColor": "#52e3ba",
+                                    "borderRadius": "25px"
+                                },
+                                "weight": "light"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "ColumnSet",
+                "separator": true,
+                "spacing": "small",
+                "columns": [
+                    {
+                        "type": "Column",
+                        "style": {
+                            "justify-content": "center"
+                        },
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "size": "medium",
+                                "wrap": true,
+                                "horizontalAlignment": "center",
+                                "text": "{panel:Order Age} Days",
+                                "color": "white",
+                                "style": {},
+                                "weight": "default"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Column",
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "size": "medium",
+                                "wrap": true,
+                                "horizontalAlignment": "center",
+                                "text": "{panel:Shiping AVG}",
+                                "color": "white",
+                                "weight": "light"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "ColumnSet",
+                "spacing": "",
+                "columns": [
+                    {
+                        "type": "Column",
+                        "style": {
+                            "justify-content": "center"
+                        },
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "size": "small",
+                                "wrap": true,
+                                "horizontalAlignment": "center",
+                                "text": "Oldest Order Age",
+                                "color": "white",
+                                "style": {},
+                                "weight": "light"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Column",
+                        "items": [
+                            {
+                                "type": "TextBlock",
+                                "size": "small",
+                                "wrap": true,
+                                "horizontalAlignment": "center",
+                                "text": "30 Day Average",
+                                "color": "white",
+                                "weight": "light"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "Container",
+                "items": []
+            }
+        ],
+        "actions": []
+    },
+    "config": {
+        "fontFamily": "Open Sans",
+        "fontSizes": {
+            "default": 14,
+            "small": 16,
+            "medium": 20,
+            "large": 32,
+            "extraLarge": 50
+        },
+        "fontWeights": {
+            "default": 500,
+            "light": 100,
+            "bold": 1000
+        },
+        "containerStyles": {
+            "default": {
+                "backgroundColor": "#06d79c",
+                "foregroundColors": {
+                    "default": {
+                        "normal": "#000000"
+                    },
+                    "white": {
+                        "normal": "#ffffff"
+                    },
+                    "grey": {
+                        "normal": "#5C6372"
+                    },
+                    "orange": {
+                        "normal": "#f2B900"
+                    },
+                    "yellow": {
+                        "normal": "#ffcb05"
+                    },
+                    "black": {
+                        "normal": "#000000"
+                    },
+                    "lightGreen": {
+                        "normal": "#3ADCCA"
+                    },
+                    "green": {
+                        "normal": "#54a254"
+                    },
+                    "red": {
+                        "normal": "#dd1111"
+                    },
+                    "accent": {
+                        "normal": "#2E89FC"
+                    },
+                    "good": {
+                        "normal": "#54a254"
+                    },
+                    "warning": {
+                        "normal": "#e69500"
+                    },
+                    "attention": {
+                        "normal": "#cc3300"
+                    }
+                }
+            }
+        },
+        "imageSizes": {
+            "default": 40,
+            "small": 40,
+            "medium": 100,
+            "large": 160
+        },
+        "imageSet": {
+            "imageSize": "medium",
+            "maxImageHeight": 100
+        },
+        "actions": {
+            "color": "",
+            "backgroundColor": "",
+            "maxActions": 5,
+            "spacing": "extraLarge",
+            "buttonSpacing": 20,
+            "actionsOrientation": "horizontal",
+            "actionAlignment": "center",
+            "showCard": {
+                "actionMode": "inline",
+                "inlineTopMargin": 16,
+                "style": "default"
+            }
+        },
+        "spacing": {
+            "default": 5,
+            "small": 20,
+            "medium": 60,
+            "large": 20,
+            "extraLarge": 40,
+            "padding": 40
+        },
+        "separator": {
+            "lineThickness": 1,
+            "lineColor": "#eeeeee"
+        },
+        "factSet": {
+            "title": {
+                "size": "default",
+                "color": "default",
+                "weight": "bold",
+                "warp": true
+            },
+            "value": {
+                "size": "default",
+                "color": "default",
+                "weight": "default",
+                "warp": true
+            },
+            "spacing": 20
+        },
+        "supportsInteractivity": true,
+        "height": 193,
+        "imageBaseUrl": ""
+    }
+}

@@ -1,0 +1,631 @@
+{
+    "card": {
+        "style": "",
+        "script": "",
+        "title": "",
+        "titleStyle": [
+            {
+                "display": "none"
+            }
+        ],
+        "showCarousel": true,
+        "conditions": [],
+        "body": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "ColumnSet",
+                        "columns": [
+                            {
+                                "type": "Column",
+                                "spacing": "none",
+                                "style": {
+                                    "padding-left": "20px",
+                                    "backgroundColor": "#303334"
+                                },
+                                "items": [
+                                    {
+                                        "type": "ColumnSet",
+                                        "class": "condition_container indexsp-stock",
+                                        "spacing": "medium",
+                                        "columns": [
+                                            {
+                                                "type": "Column",
+                                                "width": "stretch",
+                                                "items": [
+                                                    {
+                                                        "type": "Image",
+                                                        "horizontalAlignment": "center",
+                                                        "url": "http://fossil.scene7.com/is/image/FossilPartners/FS5512_main?$aemResponsive_pdp$",
+                                                        "size": "large",
+                                                        "style": {
+                                                            "border-radius": "50%",
+                                                            "border": "4px solid #e4b267",
+                                                            "margin": "auto"
+                                                        },
+                                                        "altText": "placeholder"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Column",
+                                                "style": {
+                                                    "paddingLeft": "20px"
+                                                },
+                                                "width": "stretch",
+                                                "items": [
+                                                    {
+                                                        "type": "TextBlock",
+                                                        "horizontalAlignment": "right",
+                                                        "class": "",
+                                                        "text": "<i>SKU<br>ASIN</i>",
+                                                        "size": "defualt",
+                                                        "color": "white",
+                                                        "style": {
+                                                            "paddingLeft": "10px",
+                                                            "lineHeight": "34px",
+                                                            "paddingBottom": "10px"
+                                                        },
+                                                        "spacing": "small"
+                                                    },
+                                                    {
+                                                        "type": "TextBlock",
+                                                        "class": "",
+                                                        "horizontalAlignment": "right",
+                                                        "text": "<i>Campaign<br>Ad Group<br>AD ID</I>",
+                                                        "size": "defualt",
+                                                        "color": "white",
+                                                        "style": {
+                                                            "paddingLeft": "10px",
+                                                            "lineHeight": "22px"
+                                                        },
+                                                        "spacing": "small"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Column",
+                                                "style": {
+                                                    "paddingLeft": "20px",
+                                                    "paddingRight": "25px"
+                                                },
+                                                "width": "stretch",
+                                                "items": [
+                                                    {
+                                                        "type": "TextBlock",
+                                                        "class": "",
+                                                        "text": "<b>{panel:SKU}</b><br>{panel:ASIN}",
+                                                        "size": "medium",
+                                                        "color": "white",
+                                                        "style": {
+                                                            "paddingLeft": "10px",
+                                                            "paddingBottom": "10px"
+                                                        },
+                                                        "spacing": "small"
+                                                    },
+                                                    {
+                                                        "type": "TextBlock",
+                                                        "class": "",
+                                                        "text": "{panel:CampaignName}<br>{panel:Ad Group Des}<br>{panel:Record ID}",
+                                                        "size": "small",
+                                                        "color": "white",
+                                                        "style": {
+                                                            "paddingLeft": "10px"
+                                                        },
+                                                        "spacing": "small"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "Action Outcome",
+                                        "style": {
+                                            "justify-content": "center",
+                                            "color": "#e4b267"
+                                        },
+                                        "color": "white",
+                                        "size": "large",
+                                        "spacing": "large"
+                                    },
+                                    {
+                                        "type": "Container",
+                                        "spacing": "large",
+                                        "separator": true,
+                                        "items": [
+                                            {
+                                                "type": "Container",
+                                                "items": [
+                                                    {
+                                                        "type": "ColumnSet",
+                                                        "spacing": "medium",
+                                                        "columns": [
+                                                            {
+                                                                "type": "Column",
+                                                                "style": {
+                                                                    "paddingBottom": "20px"
+                                                                },
+                                                                "separator": true,
+                                                                "items": [
+                                                                    {
+                                                                        "type": "Image",
+                                                                        "url": "http://images.luzernsolutions.com/images/cobi/BloxImages/AAFeedback/Like.png",
+                                                                        "spacing": "small",
+                                                                        "horizontalAlignment": "center",
+                                                                        "size": "medium"
+                                                                    },
+                                                                    {
+                                                                        "type": "TextBlock",
+                                                                        "size": "large",
+                                                                        "weight": "light",
+                                                                        "horizontalAlignment": "center",
+                                                                        "spacing": "medium",
+                                                                        "color": "white",
+                                                                        "text": "Good"
+                                                                    }
+                                                                ],
+                                                                "selectAction": {
+                                                                    "type": "Action.Submit",
+                                                                    "action": "post",
+                                                                    "url": "https://hooks.zapier.com/hooks/catch/3598113/vq9880/",
+                                                                    "title": "Submit",
+                                                                    "data": {
+                                                                        "ASIN": "{panel:ASIN}",
+                                                                        "Geo": "{panel:Amz Geo}",
+                                                                        "SKU": "{panel:SKU}",
+                                                                        "AD ID": "{panel:Record ID}",
+                                                                        "Spend": "{panel:Spend}",
+                                                                        "Sales": "{panel:Sales}",
+                                                                        "ACOS": "{panel:Acos}"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "Column",
+                                                                "items": [
+                                                                    {
+                                                                        "type": "Image",
+                                                                        "spacing": "small",
+                                                                        "horizontalAlignment": "center",
+                                                                        "url": "http://images.luzernsolutions.com/images/cobi/BloxImages/AAFeedback/Watch.png",
+                                                                        "size": "medium"
+                                                                    },
+                                                                    {
+                                                                        "type": "TextBlock",
+                                                                        "size": "large",
+                                                                        "weight": "light",
+                                                                        "horizontalAlignment": "center",
+                                                                        "spacing": "medium",
+                                                                        "color": "white",
+                                                                        "text": "At Risk"
+                                                                    }
+                                                                ],
+                                                                "selectAction": {
+                                                                    "type": "Action.Submit",
+                                                                    "action": "post",
+                                                                    "url": "https://hooks.zapier.com/hooks/catch/3598113/vipqj7/",
+                                                                    "title": "Submit",
+                                                                    "data": {
+                                                                        "ASIN": "{panel:ASIN}",
+                                                                        "Geo": "{panel:Amz Geo}",
+                                                                        "SKU": "{panel:SKU}",
+                                                                        "AD ID": "{panel:Record ID}",
+                                                                        "Spend": "{panel:Spend}",
+                                                                        "Sales": "{panel:Sales}",
+                                                                        "ACOS": "{panel:Acos}"
+                                                                    }
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "Column",
+                                                                "items": [
+                                                                    {
+                                                                        "type": "Image",
+                                                                        "spacing": "small",
+                                                                        "horizontalAlignment": "center",
+                                                                        "url": "http://images.luzernsolutions.com/images/cobi/BloxImages/AAFeedback/Pause.png",
+                                                                        "size": "medium"
+                                                                    },
+                                                                    {
+                                                                        "type": "TextBlock",
+                                                                        "size": "large",
+                                                                        "weight": "light",
+                                                                        "horizontalAlignment": "center",
+                                                                        "spacing": "medium",
+                                                                        "color": "white",
+                                                                        "text": "Pause"
+                                                                    }
+                                                                ],
+                                                                "selectAction": {
+                                                                    "type": "Action.Submit",
+                                                                    "action": "post",
+                                                                    "url": "https://hooks.zapier.com/hooks/catch/3598113/vq9bk1/",
+                                                                    "title": "Submit",
+                                                                    "data": {
+                                                                        "ASIN": "{panel:ASIN}",
+                                                                        "Geo": "{panel:Amz Geo}",
+                                                                        "SKU": "{panel:SKU}",
+                                                                        "AD ID": "{panel:Record ID}",
+                                                                        "Spend": "{panel:Spend}",
+                                                                        "Sales": "{panel:Sales}",
+                                                                        "ACOS": "{panel:Acos}"
+                                                                    }
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Column",
+                                "spacing": "medium",
+                                "items": [
+                                    {
+                                        "type": "Container",
+                                        "spacing": "none",
+                                        "items": [
+                                            {
+                                                "type": "ColumnSet",
+                                                "separator": false,
+                                                "spacing": "none",
+                                                "columns": [
+                                                    {
+                                                        "type": "Column",
+                                                        "spacing": "none",
+                                                        "style": {
+                                                            "flex-direction": "row"
+                                                        },
+                                                        "items": [
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "style": {
+                                                                    "textAlign": "center"
+                                                                },
+                                                                "tag": "span",
+                                                                "horizontalAlignment": "center",
+                                                                "text": "Product Ad Insight",
+                                                                "size": "large",
+                                                                "color": "default",
+                                                                "weight": "light",
+                                                                "spacing": "small",
+                                                                "separator": false
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "ColumnSet",
+                                                "separator": false,
+                                                "spacing": "large",
+                                                "columns": [
+                                                    {
+                                                        "type": "Column",
+                                                        "selectAction": {
+                                                            "type": "Action.OpenUrl",
+                                                            "url": ""
+                                                        },
+                                                        "items": [
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "Spend"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "Sales GMV"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "large",
+                                                                "weight": "default",
+                                                                "wrap": true,
+                                                                "text": "ACoS%"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "separator": true,
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "Impressions"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "CTR"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "Clicks"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "CPC"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "Orders"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "AOV"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "Conv%"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "light",
+                                                                "wrap": true,
+                                                                "text": "CPC/AOV%"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "Column",
+                                                        "style": {
+                                                            "padding-right": "15px"
+                                                        },
+                                                        "items": [
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:Spend}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:Sales}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "large",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:Acos}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "separator": true,
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:Impressions}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:CTR}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:Clicks}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:CPC}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:Orders}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:AOV}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:Conv}"
+                                                            },
+                                                            {
+                                                                "type": "TextBlock",
+                                                                "size": "medium",
+                                                                "weight": "bold",
+                                                                "wrap": true,
+                                                                "horizontalAlignment": "right",
+                                                                "text": "{panel:CPCAOV}"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Image",
+                                                "horizontalAlignment": "center",
+                                                "url": "http://images.luzernsolutions.com/images/cobi/Powered%20by%20Luzern.png",
+                                                "style": {
+                                                    "paddingTop": "30px",
+                                                    "margin": "auto",
+                                                    "width": "75%",
+                                                    "maxWidth": "250px"
+                                                },
+                                                "altText": "placeholder"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "config": {
+        "fontFamily": "Open Sans",
+        "fontSizes": {
+            "default": 16,
+            "small": 18,
+            "medium": 22,
+            "large": 28,
+            "extraLarge": 50
+        },
+        "fontWeights": {
+            "default": 400,
+            "light": 100,
+            "bold": 500
+        },
+        "containerStyles": {
+            "default": {
+                "backgroundColor": "#ffffff",
+                "foregroundColors": {
+                    "default": {
+                        "normal": "#3A4356"
+                    },
+                    "white": {
+                        "normal": "#ffffff"
+                    },
+                    "grey": {
+                        "normal": "#9EA2AB"
+                    },
+                    "orange": {
+                        "normal": "#f2B900"
+                    },
+                    "yellow": {
+                        "normal": "#ffcb05"
+                    },
+                    "black": {
+                        "normal": "#000000"
+                    },
+                    "lightGreen": {
+                        "normal": "#93c0c0"
+                    },
+                    "green": {
+                        "normal": "#8ad6ca"
+                    },
+                    "red": {
+                        "normal": "#FA5656"
+                    },
+                    "accent": {
+                        "normal": "#2E89FC"
+                    },
+                    "good": {
+                        "normal": "#54a254"
+                    },
+                    "warning": {
+                        "normal": "#e69500"
+                    },
+                    "attention": {
+                        "normal": "#cc3300"
+                    }
+                }
+            }
+        },
+        "imageSizes": {
+            "default": 40,
+            "small": 30,
+            "medium": 80,
+            "large": 250
+        },
+        "imageSet": {
+            "imageSize": "medium",
+            "maxImageHeight": 100
+        },
+        "actions": {
+            "color": "",
+            "backgroundColor": "",
+            "maxActions": 5,
+            "spacing": "large",
+            "buttonSpacing": 0,
+            "actionsOrientation": "horizontal",
+            "actionAlignment": "right",
+            "showCard": {
+                "actionMode": "inline",
+                "inlineTopMargin": 16,
+                "style": "default"
+            }
+        },
+        "spacing": {
+            "default": 15,
+            "small": 10,
+            "medium": 20,
+            "large": 30,
+            "extraLarge": 60,
+            "padding": 0
+        },
+        "separator": {
+            "lineThickness": 1,
+            "lineColor": "#D8D8D8"
+        },
+        "factSet": {
+            "title": {
+                "size": "default",
+                "color": "white",
+                "weight": "light",
+                "warp": true
+            },
+            "value": {
+                "size": "default",
+                "color": "white",
+                "weight": "bold",
+                "warp": true
+            },
+            "spacing": 20
+        },
+        "supportsInteractivity": true,
+        "imageBaseUrl": "",
+        "height": 565
+    }
+}
