@@ -11,3 +11,7 @@ Template - __Fulfilment-by-Client.json__
 
 Template - __Geo Select.json__
 ![Geo Selector](https://github.com/ConorLuzern/BloXTemplates/blob/master/Geo_Select.png)
+
+
+Template - __Feedback-Update-Mail.html__
+![Feedback-Update-Mail](https://github.com/ConorLuzern/BloXTemplates/blob/master/Feedback-Mail.png)
